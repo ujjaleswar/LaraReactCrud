@@ -93,6 +93,7 @@ function BlogCrud() {
 
       {/* Blog List */}
       <h2>All Blogs</h2>
+      <h2>All Datas........</h2>
 
       {blogs.length === 0 && <p>No blogs found.</p>}
 
