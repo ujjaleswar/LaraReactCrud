@@ -81,4 +81,10 @@ return [
         'validate_csrf_token' => Illuminate\Foundation\Http\Middleware\ValidateCsrfToken::class,
     ],
 
+    'stateful' => [
+        'localhost',
+        '127.0.0.1',
+    ],
+
+
 ];
