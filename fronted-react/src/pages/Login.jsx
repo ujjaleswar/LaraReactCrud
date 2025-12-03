@@ -20,7 +20,7 @@ export default function Login({ setIsLoggedIn }) {
       const res = await api.post("/login", form);
 
       localStorage.setItem("token", res.data.token);
-      setIsLoggedIn(true); // 🔥 IMPORTANT
+      setIsLoggedIn(true);
       navigate("/");
     } catch (err) {
       if (err.response && err.response.status === 401) {

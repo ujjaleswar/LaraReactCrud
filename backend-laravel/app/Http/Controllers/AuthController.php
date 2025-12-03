@@ -10,6 +10,7 @@ class AuthController extends Controller
 {
     public function register(Request $request)
     {
+        // dd($request->all());
         $data = $request->validate([
             'name' => 'required|string',
             'email' => 'required|string|unique:users,email',
@@ -22,8 +23,9 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
 
+        // return $user;
         $token = $user->createToken('api_token')->plainTextToken;
-
+        // return $token;
         return response()->json([
             'user' => $user,
             'token' => $token,
